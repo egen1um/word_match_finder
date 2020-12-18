@@ -60,7 +60,7 @@ class MatchFinder:
             reverse=True
         )).keys())
 
-        return [matches[i] for i in range(min(num_results, len(matches)))]
+        return matches[:min(num_results, len(matches))]
 
     @staticmethod
     def __read_file_in_chunks(file, chunk_size: int) -> str:
